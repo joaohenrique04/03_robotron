@@ -28,3 +28,35 @@ function voltaImg() {
 
     imgRobo.src = cores[imgAtual];
 }
+
+const bracos = document.getElementById('valBracos');
+const blindagem = document.getElementById('valBlindagem');
+const nucleos = document.getElementById('valNucleos');
+const pernas = document.getElementById('valPernas');
+const foguetes = document.getElementById('valFoguetes');
+
+bracos.value = 0;
+blindagem.value = 0;
+nucleos.value = 0;
+pernas.value = 0;
+foguetes.value = 0;
+
+function aumentaVlr(inputId) {
+    var input = document.getElementById(inputId);
+    var valor = parseInt(input.value);
+    if (valor < 10) {
+        input.value = valor + 1;
+    } else {
+        null;
+    }
+}
+
+function diminuiVlr(inputId) {
+    var input = document.getElementById(inputId);
+    var valor = parseInt(input.value);
+    if (valor > 0) {
+        input.value = valor - 1;
+    } else {
+        null;
+    }
+}
